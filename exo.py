@@ -1,80 +1,97 @@
-# Excercice 1 
+#exo 1 
+
 first = "Hello World"
+print (first)
 
-#Excercice 2 
-# This is a comment 
+#exo 2
 
-#Excercice 3
-print("I AM A COMPUTER")
+#This is a comment.
 
-#Excercice 4
+#exo 3 
+print ("I AM A COPUTER!")
+
+#exo 4
+
 if 1 < 2 and 4 > 2:
-    print("Math is fun.")
+    print ("Math is fun.")
     
-#Excercice 5
-nope = None 
+#exo 5
 
-#Excercice 6
+nope = None
+
+#exo 6
+
 result = True and False
 print(result)
 
-#Excercice 7
-string = "What's my Length?"
+#exo 7
+
+string = "What's my length?"
 print(len(string))
 
-#excercice 8 
-shouting = "i am shouting"
-shouting_upper = shouting.upper()
-print(shouting_upper)
+#exo 8
+string = "i am shouting"
+print(string.upper())
 
-#excercice 9
-num_str = "123"
-type(num_str)
-print(type(num_str))
-num = int(num_str)
-print(type(num))
+#exo 9
 
-#Excercice 10 
-num = 4
-word = "real"
-for_real = str(num) + word
-print(for_real)
+thousand = "1000"
+print(type(int(thousand)))
 
-#Excercice 11
-brooklyn = 3 * "cool"
-print(brooklyn)
+#exo10
+string = "real"
+four = 4 
+sentence = str(four) + string
+print(sentence)
 
-#Excercçce 12
-#ZeroDivisionError: Division by Zero 
+#exo11
+record = 3 * "cool"
+print(record)
 
-#Excercice 13 
-print(type([]))
-
-#Excercice 14
-name = input("what is your name >> ")
-print("Your name is " + name )
-
-#Excercice 15
-num = input("Please, chose a number >> ")
-real_num = int(num)
-if real_num < 0:
-    print("That number is less than 0")
-elif real_num > 0: 
-    print("That number is greater than 0")
-else:
-    print("you picked 0")
+#exo 12
+try:
+    notpossible = 1 / 0
+except ZeroDivisionError:
+    print("Division by zero is not possible!")
     
-#Excercice 16
+
+#exo 13
+    
+mylist = []
+print(type(mylist))
+
+#exo 14
+print("What is your name ?")
+name = input()
+print("Your name is " + name)
+
+#exo 15
+print("Please, chose a number ?")
+strnumber = input()
+intnumber = int(strnumber)
+if intnumber < 0:
+    print("That number is less than 0!")
+elif intnumber > 0:
+    print("That number is greater than 0!")
+else:
+    print("You picked 0!")
+
+#exo 16
+
 fruit = "apple"
-index_fruit = word.index('l')
-print(index_fruit)
+index_of_l = fruit.index('l')
+print(index_of_l)
 
-#Excercice 17
-instrument = "xylophone"
-is_a_y = "y" in instrument
-print(is_a_y)
+#exo 17
+xylo = "xylophone"
+thereY = "y" in xylo
+print(thereY)
 
-#Excercice 18
-string = "my_string"
-my_string = string.islower()
-print(my_string)
+#exo 18
+print("write a sentence in lowercase or uppercase")
+my_string = input()
+print("Your string is all in lowercase: " + str(my_string.islower()))
+    
+
+
+
