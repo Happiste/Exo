@@ -38,13 +38,13 @@ print(string.upper())
 thousand = "1000"
 print(type(int(thousand)))
 
-#exo10
+#exo 10
 string = "real"
 four = 4 
 sentence = str(four) + string
 print(sentence)
 
-#exo11
+#exo 11
 record = 3 * "cool"
 print(record)
 
