@@ -1,47 +1,60 @@
-def difference(a , b):
-    return(a - b)
+#exo1
+def dif(a, b):
+    return a + b
+print (dif(5,5))
 
-print(difference(0,2))
-
+#exo2
 def print_day(a):
-    day_of_week = {
-      1 : 'Lundi',
-      2 : 'mardi',
-      3 : 'mercredi',
-      4 : 'jeudi',
-      5 : 'vendredi',
-      6 : 'samedi',
-      7 : 'dimanche'
+    day = {
+        1:"Dimanche",
+        2:"Lundi",
+        3:"Mardi",
+        4:"Mercredi",
+        5:"Jeudi",
+        6:"Vendredi",
+        7:"Samedi, Yom Shabbat"
     }
-    return day_of_week.get(a, None)
+    return day.get(a, None)
+    
+print(print_day(7))
 
-print(print_day(1))
-
+#exo3
 def last_element(lst):
-  return lst[-1] if lst else None
-print(last_element([1,2,3,4]))
+    return lst[-1]
+    
+print(last_element([1,2,3,4,5]))
 
-def compare(a, b):
-    if a > b:
-      return 'first is greater'
-    elif a < b:
-      return 'second is greater'
-    else:
-      return 'they are equal'
+#exo4
+def compare(a,b):
+    try:
+        a = int(a)
+        b = int(b)
+        if a < b:
+            return "the second number is greater"
+        elif a > b:
+         return "the first number is greater"
+        else:
+            return "Number are equal"
+    except ValueError:
+            return "this is not a number"
+        
+        
+print (compare(1,'2'))
 
-print(compare(55,55))
+#exo5
+def single_letter_count(string, x):
+    return(string.lower().count(x.lower()))
+    
+print(single_letter_count("alloA", "a"))
 
-def single_letter_count(word, letter):
-    return(word.lower().count(letter.lower()))
-  
-print(single_letter_count('Jonathan Bitane, agee de trente quatre ans', 'a'))
+#exo6
+def multiple_letter_count(string):
+    dico = {x: string.count(x) for x in string}
+    return dico
+print(multiple_letter_count("salut"))
 
-def multiple_letter_count(word):
-    return {letter: word.count(letter) for letter in word}
-
-print(multiple_letter_count("hello"))
-
-
+    
+#exo7
 def list_manip(my_list, command, position, value = None):
     if command == "remove" and position == "end":
         return my_list.pop()
@@ -53,32 +66,30 @@ def list_manip(my_list, command, position, value = None):
     elif command == "add" and position == "beginning":
         my_list.insert(0, value)
         return(my_list)
+    
+print(list_manip([5, 5, 5, 5], "add", 'beginning', 5))
 
-print(list_manip([1, 2, 3], "add", 'beginning', 15))
+#exo8
+def is_palindrome(string):
+    return string == string[::-1]
+    
+print(is_palindrome("holloh"))
 
-def is_palindrome(word):
-    return word == word[::-1]
+#exo9
+def frequency(lst, x):
+    num = lst.count(x)
+    return num
+print(frequency([1,23,1,4,1,5,5,3,23,6, 5, 7, 5, 10,13,5], 5))
 
-def frequency(my_list, search):
-    return print((my_list.count(search)))
-
-frequency([1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6, 7, 8, 9, 10], 5)
-
-def capitalize(string):
-    return print(string.title())
-capitalize('hello world')
-
-def compact(lst):
-    compacted = [x for x in lst if x]
-    return print(compacted)
-
-compact([0,1,2,"",[], False, {}, None, "All done"]) # [1,2, "All done"]
-
-#lst = ["a", "aa", 'aaa', 'aaaa', 'aaaaa', 'aaaaaa']
-#stringsup3 = [x for x in lst if x.len() > 3]
-#print(stringsup3)
-
-
+#exo10
+def multiply_even_numbers(lst):
+    even_numbers = [num for num in lst if num % 2 == 0]
+    product = 1
+    for num in even_numbers:
+        product *= num
+    return product
+    
+#exo11
 def is_even(num):
     return num % 2 == 0
 
@@ -89,22 +100,13 @@ def partition(lst, fn):
 
 print(partition([1, 2, 3, 4, 5, 6], is_even))
 
-
-def is_even(num):
-    return num % 2 == 0
-    
-def partition(lst, func):
-    true = [x for x in lst if func(x)]
-    false = [x for x in lst if not func(x)]
-    return [true, false]
-    
-print(partition([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], is_even))
-
+#exo 12
 def intersection(lst1, lst2 ):
     return [num for num in lst1 if num in lst2]
     
 print(intersection([1, 2, 3, 4, 5, 6, 55], [2, 5, 1, 6, 7, 9,55]))
 
+#exo 13 
 def once(func):
     def inner(*args, **kwargs):
         if not inner.has_run:
@@ -120,10 +122,4 @@ def add(a,b):
 one_addition = once(add)
 print(one_addition(2,4))
 
-
-
-    
-
-
-
-    
+print(multiply_even_numbers([2,3,4,5,6]))
