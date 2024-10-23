@@ -121,5 +121,3 @@ def add(a,b):
 
 one_addition = once(add)
 print(one_addition(2,4))
-
-print(multiply_even_numbers([2,3,4,5,6]))
